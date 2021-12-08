@@ -7,7 +7,7 @@
 To install Gitlab Automaticaly you need to run this comman on your Terminal
 
 ```
-curl -so ~/gitlab_install.sh https://mirror.istc.am/scripts/gitlab/gitlab.sh && bash ~/gitlab_install.sh -d <Your Domain>
+bash ~/gitlab_install.sh -d <Your Domain>
 
 ```
 ### Options
