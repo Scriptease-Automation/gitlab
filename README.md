@@ -1,18 +1,32 @@
 # GitLab Automation
 
-## Description
+Gitlab installer for Ubuntu, Debian, CentOS, RHEL and OpenSUSE.
 
-### Installation Step
+This script lets you set up your own Gitlab server in a couple of minutes, using your desired parameters. It is designed to be as user-friendly as possible, requiring minimum experience.
 
-To install Gitlab Automaticaly you need to run this comman on your Terminal
+### Installation	
+
+1. Download the installer script
 
 ```
-bash ./gitlab_install.sh -d <Your Domain>
+curl -O https://raw.githubusercontent.com/Scriptease-Automation/gitlab/master/gitlab.sh
+```
+
+2. Make it executable
 
 ```
-### Options
+chmod +x gitlab.sh
 ```
--d <your domain> Set Domain for Gitlab 
--r <enabled/none> Set option To activate the Container Registery
--n <your domain> Set Domain for Container Registery
+
+3. Run the installer
+
+```
+bash ./gitlab.sh -d <your domain> 
+```
+
+### Additional options
+
+```
+-r <enabled/none> Enable/disable Container Registry
+-n <registry domain> Set domain for Container Registry
 ```
