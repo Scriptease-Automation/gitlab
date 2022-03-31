@@ -1,12 +1,12 @@
 #!/bin/bash
 # Owner ISTC Foundation
 # Created By Vardges Hovhannisyan
-#Installing Gitlab
+# Installing Gitlab
 #/////////////////////////////////////////////////////////
-#Collection All neccessary data and configruing Variables
+# Collecting all neccessary data and configruing variables
 #/////////////////////////////////////////////////////////
 #########################################################################################################
-#standalone Variables
+#Standalone Variables
 #########################################################################################################
 letsfolder=/etc/letsencrypt/live/
 gitlabssl=/etc/gitlab/ssl/
@@ -178,14 +178,14 @@ elif [[ ${DIST} = "openSUSE"* ]];
 
 else
     echo "
-        Sorry This Operating System Does not support, 
-        Pleas see the suppored OS Bellow
-        https://about.gitlab.com/install/#opensuse-leap-15-2
+        Sorry, this operating system is not supported, 
+        Please see the supported OS list in the web page below.
+        https://about.gitlab.com/install/
         "
 fi
 if [[ ${registry} = "enabled" ]]; 
     then
-        echo "Stoping GitLab to Configure Registery"
+        echo "Stopping GitLab to configure registry"
         sudo gitlab-ctl stop
         if [[ ${DIST} = "Ubuntu"* ]]; then
             #Installing Certbot 
@@ -257,9 +257,9 @@ if [[ ${registry} = "enabled" ]];
 
         elif [[ ${registry} = "none" ]];
             then
-                echo "Ok We Starting configure only Gitlab without Registry Container"
+                echo "Setting up Gitlab without container registry"
         else
-                echo "Unkown Option $registry" 
+                echo "Unknown Option: $registry" 
     echo "Username for ROOT Profle:  root"
     echo "Random Password for 24 hours:"
     sudo cat /etc/gitlab/initial_root_password | grep Password:
